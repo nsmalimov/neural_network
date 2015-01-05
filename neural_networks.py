@@ -1,0 +1,51 @@
+# -*- coding: utf-8 -*- 
+import numpy as np
+from sklearn.neural_network import BernoulliRBM
+
+
+def prepare_data(filename):
+	f = open(filename, 'r')
+	train_X = []
+	train_Y = []
+
+	test_X = []
+	test_Y = []
+
+	readlines = f.readlines()
+	limiter_train = 1072
+
+	for i in xrange(limiter_train):
+		train_X.append([])
+		readlines_split = readlines[i].split(";")
+		for j in readlines_split:
+	    	    if (j == readlines_split[-1]): None
+	    	    else:		
+	       	       train_X[i].append(float(j))
+		train_Y.append(int(readlines_split[-1][0:len(readlines_split)-1]))
+
+	count = 0
+	for i in xrange(limiter_train - 1, len(readlines)):
+	#print limiter_train
+		test_X.append([])
+		readlines_split = readlines[i].split(";")
+	#print readlines_split
+		for j in readlines_split:
+	    	    if (j == readlines_split[-1]): None
+	    	    else:		
+	       	       test_X[count].append(float(j))
+		test_Y.append(int(readlines_split[-1][0:len(readlines_split)-1]))
+		count = count + 1
+	return train_X, train_Y, test_X, test_Y
+
+train_X, train_Y, test_X, test_Y = prepare_data("data_banknote_authentication_rand.txt")
+
+
+#NN.train_net(train_X, train_Y)
+#answer_array = NN.test_net(test_X)
+#print answer_array
+
+
+
+
+
+
