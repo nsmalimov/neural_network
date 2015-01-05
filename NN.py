@@ -180,7 +180,6 @@ test_X[58] = test_X[58][0:4]
 true_answer = 0
 false_answer = 0
 
-
 answer_array = []
 
 for i in xrange(len(test_X)):
@@ -192,17 +191,3 @@ for i in xrange(len(test_X)):
         false_answer += 1
 
 print true_answer, false_answer
-
-
-
-
-
-
-
-
-
-
-
-
-
-

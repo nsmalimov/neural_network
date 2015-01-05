@@ -32,10 +32,3 @@ def prepare_data(filename):
 		test_Y.append(int(readlines_split[-1][0:len(readlines_split)-1]))
 		count = count + 1
 	return train_X, train_Y, test_X, test_Y
-
-train_X, train_Y, test_X, test_Y = prepare_data("data_banknote_authentication_rand.txt")
-
-
-
-
-
