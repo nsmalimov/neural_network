@@ -1,7 +1,5 @@
 # -*- coding: utf-8 -*- 
 import numpy as np
-from sklearn.neural_network import BernoulliRBM
-
 
 def prepare_data(filename):
 	f = open(filename, 'r')
@@ -25,10 +23,8 @@ def prepare_data(filename):
 
 	count = 0
 	for i in xrange(limiter_train - 1, len(readlines)):
-	#print limiter_train
 		test_X.append([])
 		readlines_split = readlines[i].split(";")
-	#print readlines_split
 		for j in readlines_split:
 	    	    if (j == readlines_split[-1]): None
 	    	    else:		
@@ -38,12 +34,6 @@ def prepare_data(filename):
 	return train_X, train_Y, test_X, test_Y
 
 train_X, train_Y, test_X, test_Y = prepare_data("data_banknote_authentication_rand.txt")
-
-
-#NN.train_net(train_X, train_Y)
-#answer_array = NN.test_net(test_X)
-#print answer_array
-
 
 
 
