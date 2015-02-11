@@ -108,7 +108,6 @@ def train_one_back(matrix_dist, x_array, true_answer, w_matrix, num_layers, is_s
         num -=1
     return w_matrix, step_error
 
-
 def shake_up(w_matrix, matrix_dist, num_layers):
     w_matrix = []
     for i in xrange(num_layers):
@@ -153,7 +152,7 @@ num_neuron = len(train_X[0])
 matrix_dist = create_matrix(num_layers, num_neuron)
 
 #послойное представление весов
-#до обучения задаём веса неокторыми значениями 
+#до обучения задаём веса некоторыми значениями 
 w_matrix = []
 for i in xrange(num_layers):
     w_matrix.append([])
