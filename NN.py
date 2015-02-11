@@ -59,9 +59,9 @@ def classificate_one(matrix_dist, x_array, w_matrix, parametr):
     #начальное значение вектора x
     last_layer = x_array 
     last_layer_help = []
-    #выисляем по слоям
+    #вычисляем по слоям
     for i in xrange(len(matrix_dist)):
-        #выисляем по каждому нейрону в слое
+        #вычисляем по каждому нейрону в слое
         for j in xrange(len(matrix_dist[0])):
             answer_neuron = one_neuron_out(last_layer, w_matrix[i][j], 0)
             result_neuron_matrix[i].append(answer_neuron)
