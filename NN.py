@@ -34,6 +34,7 @@ def one_neuron_out(x_array, w_array, parametr):
     if (parametr == 1):
         return summator
 
+
 #классифицируем
 #последний скрытый слой
 def last_neuron(x_array):
